@@ -1,0 +1,41 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="ConsultaClienteController">
+  
+  <aura:attribute name="Abrir" type="boolean" default="true"/>
+  <aura:attribute name="recordId" type="String"/>
+    
+  <aura:attribute name="dadoEndereco" type="ConsultaClienteController.wrapperclass"/> 
+    
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">Digite o CEP:</label>
+  <div class="slds-form-element__control">
+    <input id="inpCep" label="CEP" maxlength="8" class="slds-input" />
+    <div class="slds-form-element__help">ex: 05416000</div>
+  </div>
+
+  <div class="slds-form-element">
+    <button class="slds-button slds-button_neutral" onclick="{! c.buscarCEP }">Buscar</button>
+  </div>
+    
+    
+  <br/>
+  <aura:if isTrue="{!v.Abrir}">
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">CEP</label>
+  <input id="inpCepR" label="CEPR" maxlength="9" class="slds-input" value="{!v.dadoEndereco.cep}"/>
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">Logradouro</label>
+  <input id="inpLogradouro" label="Logradouro" maxlength="9" class="slds-input" value="{!v.dadoEndereco.logradouro}"/>
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">Complemento</label>
+  <input id="inpComplemento" label="Complemento" maxlength="9" class="slds-input" value="{!v.dadoEndereco.complemento}"/>
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">Bairro</label>
+  <input id="inpBairro" label="Bairro" maxlength="9" class="slds-input" value="{!v.dadoEndereco.bairro}"/>
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">Localidade</label>
+  <input id="inpLocalidade" label="Localidade" maxlength="9" class="slds-input" value="{!v.dadoEndereco.localidade}"/> 
+  <label class="slds-form-element__label" for="text-input-id-1" id="inline-text-label">Uf</label>
+  <input id="inpUf" label="Uf" maxlength="9" class="slds-input" value="{!v.dadoEndereco.uf}"/>
+    
+  <div class="slds-form-element">
+    <button class="slds-button slds-button_neutral" onclick="{! c.salvarDados }">Salvar</button>
+  </div>
+  </aura:if>  
+  
+
+
+</aura:component>
