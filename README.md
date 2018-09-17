@@ -2,7 +2,8 @@
 
 Nome: Caioby Aleixo Ripoli Fiochi
 
-Componente 
+Componente
+
 Esse componente foi desenvolvido para ser inserido dentro de uma page layout de conta, na qual será possível pegar o id do registro para inserir no
  endereço da conta. 
 Para isso foi usado no implements do CMP o force:hasRecordId, que por meio de um atributo recordId salva o id do registro que o componente está.
