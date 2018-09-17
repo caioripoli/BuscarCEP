@@ -1,6 +1,6 @@
 <aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" controller="ConsultaClienteController">
   
-  <aura:attribute name="Abrir" type="boolean" default="true"/>
+  <aura:attribute name="Abrir" type="boolean" default="false"/>
   <aura:attribute name="recordId" type="String"/>
     
   <aura:attribute name="dadoEndereco" type="ConsultaClienteController.wrapperclass"/> 
